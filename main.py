@@ -10,7 +10,7 @@ from azure.storage.blob import BlobServiceClient
 
 load_dotenv(dotenv_path=Path(__file__).with_name(".env"))
 
-app = FastAPI(title="API Fichiers Azure")
+app = FastAPI(title="API Fichiers Azure", port=8000)
 
 CONTAINER_NAME = "fichiers-api"
 
