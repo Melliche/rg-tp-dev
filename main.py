@@ -189,7 +189,7 @@ def upload_page(status: str = "", filename: str = "") -> str:
 
         <h2>Routes API disponibles</h2>
         <ul>
-            <li><code>GET /files</code> : liste les fichiers</li>
+            <li><code>GET /files</code> : liste les fichierssssss</li>
             <li><code>POST /upload</code> : upload un fichier</li>
             <li><code>DELETE /remove?filename=nom_du_fichier</code> : supprime un fichier</li>
         </ul>
