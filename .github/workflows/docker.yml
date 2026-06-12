@@ -32,19 +32,19 @@ jobs:
           ${{ secrets.ACR_LOGIN_SERVER }}/fastapi-blob:v1
         file: ./Dockerfile
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-    - name: Deploy to Azure Web App
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'webapptpdev2'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_E60A5117BFDF4923ADC311DEC3C59B99 }}
-        images: '${{ secrets.ACR_LOGIN_SERVER }}/fastapi-blob:latest'
+#  deploy:
+#    runs-on: ubuntu-latest
+#    needs: build
+#    environment:
+#      name: 'production'
+#      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+#
+#    steps:
+#    - name: Deploy to Azure Web App
+#      id: deploy-to-webapp
+#      uses: azure/webapps-deploy@v2
+#      with:
+#        app-name: 'webapptpdev2'
+#        slot-name: 'production'
+#        publish-profile: ${{ secrets.AzureAppService_PublishProfile_E60A5117BFDF4923ADC311DEC3C59B99 }}
+#        images: '${{ secrets.ACR_LOGIN_SERVER }}/fastapi-blob:latest'
